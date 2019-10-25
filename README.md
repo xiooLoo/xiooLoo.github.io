@@ -70,6 +70,9 @@ XIOOLOO.GITHUB.IO
 ┃
 ┣━━━━node_modules
 ┃
+┣━━━━scripts┏━━━build.js
+┃           ┣━━━start.js
+┃           ┗━━━test.js
 ┣━━━━public┏━━━index.html
 ┃          ┣━━━logo.png
 ┃          ┣━━━robots.txt
