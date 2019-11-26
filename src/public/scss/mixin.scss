@@ -1,0 +1,20 @@
+/**
+ * 定义样式的混合方法文件
+ */
+
+// 强制不换行超出文字省略显示
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 多行情况下第line行超出文字省略
+@mixin multiEllipsis ($line) {
+display: -webkit-box;
+-webkit-box-orient: vertical;
+text-overflow: ellipsis;
+-webkit-line-clamp: $line;
+overflow: hidden;
+word-break: break-all;
+}
