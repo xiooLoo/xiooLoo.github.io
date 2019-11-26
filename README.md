@@ -57,6 +57,13 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+## 启用静态服务运行项目：
+
+```
+npm install -g serve
+serve -s build
+```
+
 ## 此项目编译及打包发布：
 
 ```
