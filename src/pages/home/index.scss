@@ -6,10 +6,10 @@
   align-items: flex-start;
   &-left {
     flex: 1;
-    background-color: #fff;
+    background-color: transparent; // #fff;
   }
   &-calendar {
     width: 300px;
-    border: 1px solid #eee; 
+    border: 1px solid transparent; // #eee; 
   }
 }

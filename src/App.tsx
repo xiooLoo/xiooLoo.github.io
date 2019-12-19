@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <ConfigProvider locale={zhCN}>
       <div className="App">
-        <Header className="App-header" name="Jinpeng~"/>
+        <Header className="App-header" name="零壹"/>
         <Home />
       </div>
     </ConfigProvider>
