@@ -13,14 +13,25 @@ class Header extends React.Component<Props, States> {
     constructor(props: any) {
         super(props);
         this.state = {
-            date: new Date().toLocaleDateString()
+            date: new Date().toDateString()
         };
     }
 
     render () {
         return (
             <div className="header-content">
-                <h2>Hello, {this.props.name}</h2>
+                <div className="logo">
+                    <a href="#home">
+                        <img src={require("../../public/assets/logo_large.png")} alt="logo" style={{width: '100px', height: '100%'}}/>
+                    </a>
+                    <div className="tabs">
+                        {['|', '首页', '倒计时', '留言'].map(item => {
+                            return (
+                                <span className="tabs-item">{item}</span>
+                            );
+                        })}
+                    </div>
+                </div>
                 <div className="user-info">
                     <span>{this.props.name}</span>
                     <span>{this.state.date}</span>

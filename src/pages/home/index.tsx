@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar } from 'antd';
+import { Calendar, Icon } from 'antd';
 import './index.scss';
 
 interface Props {
@@ -7,6 +7,11 @@ interface Props {
 
 interface States {
 }
+
+const leftMenus: Object = [
+    {icon: 'test', title: ''}
+]
+
 class Home extends React.Component<Props, States> {
     constructor(props: any) {
         super(props);
@@ -22,6 +27,9 @@ class Home extends React.Component<Props, States> {
     render() {
         return (
             <div className="home">
+                <div className="home-nav">
+                    <span className="home-nav-icon"></span>
+                </div>
                 <div className="home-left">
                     left
                 </div>

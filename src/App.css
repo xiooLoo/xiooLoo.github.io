@@ -1,3 +1,5 @@
+@font-face { font-family: "Ionicons"; src: url("./public/fonts/ionicons.eot"); src: url("./public/fonts/ionicons.eot?#iefix") format("embedded-opentype"), url("./public/fonts/ionicons.woff") format("woff"), url("./public/fonts/ionicons.ttf") format("truetype"), url("./public/fonts/ionicons.svg#slick") format("svg"); font-weight: normal; font-style: normal; }
+
 .App {
   text-align: center;
 }

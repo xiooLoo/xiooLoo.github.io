@@ -4,6 +4,12 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-start;
+  &-nav {
+    &-icon:before {
+      font-family: 'Ionicons';
+      content: '\f2cb';
+    }
+  }
   &-left {
     flex: 1;
     background-color: transparent; // #fff;

@@ -8,9 +8,33 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  h2 {
-    margin-left: 20px;
-    color: #61dafb;
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .h2 {
+      margin-left: 20px;
+      color: #61dafb;
+    }
+    .tabs {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      &-item:nth-child(1) {
+        margin-left: 20px;
+      }
+      &-item {
+        margin-right: 20px;
+        cursor: pointer;
+      }
+      &-item:hover {
+        -webkit-transform:translateY(-6px);
+        transform: translateY(-6px);
+        transition: all 0.5s ease-in-out;
+      }
+    }
   }
   .user-info {
     display: flex;
