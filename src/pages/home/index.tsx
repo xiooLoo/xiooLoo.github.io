@@ -8,8 +8,11 @@ interface Props {
 interface States {
 }
 
-const leftMenus: Object = [
-    {icon: 'test', title: ''}
+const leftMenus: any[] = [
+    {clazzName: 'home-nav-home'},
+    {clazzName: 'home-nav-alarm'},
+    {clazzName: 'home-nav-book'},
+    {clazzName: 'home-nav-earth'},
 ]
 
 class Home extends React.Component<Props, States> {
@@ -28,9 +31,13 @@ class Home extends React.Component<Props, States> {
         return (
             <div className="home">
                 <div className="home-nav">
-                    <span className="home-nav-icon"></span>
+                    {leftMenus.map(item => {
+                        return (
+                            <span className={item.clazzName}></span>        
+                        );
+                    })}
                 </div>
-                <div className="home-left">
+                <div className="home-content">
                     left
                 </div>
                 <div className="home-calendar">

@@ -13,6 +13,11 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    &-img {
+      width: 100px; 
+      height: 100%;
+      margin-left: 20px;
+    }
     .h2 {
       margin-left: 20px;
       color: #61dafb;

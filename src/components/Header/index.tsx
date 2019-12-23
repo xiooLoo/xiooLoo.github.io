@@ -22,7 +22,7 @@ class Header extends React.Component<Props, States> {
             <div className="header-content">
                 <div className="logo">
                     <a href="#home">
-                        <img src={require("../../public/assets/logo_large.png")} alt="logo" style={{width: '100px', height: '100%'}}/>
+                        <img src={require("../../public/assets/logo_large.png")} className="logo-img" alt="logo"/>
                     </a>
                     <div className="tabs">
                         {['|', '首页', '倒计时', '留言'].map(item => {

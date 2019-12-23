@@ -5,6 +5,8 @@ import Home from './pages/home'
 import Header from '../src/components/Header';
 import zhCN from 'antd/es/locale/zh_CN';
 import { ConfigProvider } from 'antd';
+import './public/scss/index.scss';
+
 
 const App: React.FC = () => {
   return (
