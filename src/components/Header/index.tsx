@@ -27,7 +27,7 @@ class Header extends React.Component<Props, States> {
                     <div className="tabs">
                         {['|', '首页', '倒计时', '留言'].map(item => {
                             return (
-                                <span className="tabs-item">{item}</span>
+                                <span className="tabs-item" key={item}>{item}</span>
                             );
                         })}
                     </div>

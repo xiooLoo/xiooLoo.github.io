@@ -1,6 +1,7 @@
 import React from 'react';
-import { Calendar, Icon } from 'antd';
+import { Calendar } from 'antd';
 import './index.scss';
+import Header from '../../components/Header';
 
 interface Props {
 }
@@ -29,11 +30,13 @@ class Home extends React.Component<Props, States> {
 
     render() {
         return (
+            <>
+            <Header className="App-header" name="零壹"/>
             <div className="home">
                 <div className="home-nav">
-                    {leftMenus.map(item => {
+                    {leftMenus.map(item => {    
                         return (
-                            <span className={item.clazzName}></span>        
+                            <span className={item.clazzName} key={item.clazzName}></span>        
                         );
                     })}
                 </div>
@@ -44,6 +47,7 @@ class Home extends React.Component<Props, States> {
                     <Calendar fullscreen={false} onPanelChange={this.onPanelChange} />
                 </div>
             </div>
+            </>
         )
     }
 }
