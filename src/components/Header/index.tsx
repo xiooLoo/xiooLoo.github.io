@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.scss';
+import { RouteComponentProps, Link } from 'react-router-dom';
 
 interface Props {
     className?: String;
@@ -9,8 +10,12 @@ interface Props {
 interface States {
     readonly date: String
 }
-class Header extends React.Component<Props, States> {
-    constructor(props: any) {
+interface TopProps extends RouteComponentProps {
+    name: ''
+}
+
+class Header extends React.Component<Props, States, TopProps> {
+    constructor(props: TopProps) {
         super(props);
         this.state = {
             date: new Date().toDateString()
@@ -25,9 +30,9 @@ class Header extends React.Component<Props, States> {
                         <img src={require("../../public/assets/logo_large.png")} className="logo-img" alt="logo"/>
                     </a>
                     <div className="tabs">
-                        {['|', '首页', '倒计时', '留言'].map(item => {
+                        {[{name: '|', path: '/'}, {name: 'HOME', path: 'home'}, {name: 'BIRTH', path: 'birth'}, {name: 'QUILL', path: 'quill'}, {name: 'MKDown', path: 'mkdown'}].map(item => {
                             return (
-                                <span className="tabs-item" key={item}>{item}</span>
+                                <Link className="tabs-item" to={item.path} onClick={() => this.handleQuillEditor(item)} key={item.name}>{item.name}</Link>
                             );
                         })}
                     </div>
@@ -38,6 +43,11 @@ class Header extends React.Component<Props, States> {
                 </div>
             </div>
         )
+    }
+
+    handleQuillEditor = (item: any) => {
+        console.log('跳转:', item)
+        // this.props.history.push('/quill');
     }
 }
 

@@ -1,27 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  HashRouter  as Router,
+  HashRouter,
   Switch,
 	Route,
 	Redirect,
 } from "react-router-dom";
-// import Header from '../components/Header';
-import Home from '../pages/home';
+import Root from '../pages/root';
 import Login from '../pages/login';
+import Home from '../pages/home';
 import Birth from '../pages/birthday';
+import Quill from '../pages/quill';
+import MKDown from '../pages/mkdown';
 
-const basename = '/';
 
 const RouterConfig = () => {
+	const [isLogin, setIsLogin] = useState(true)
+
 	return (
-		<Router basename={basename}>
-	      <Switch>
-					<Route path='/login' component={Login} />
-					<Route path='/home' component={Home} />
-					<Route path="/birth" component={Birth} />
-					<Redirect to="/login" />
-				</Switch>
-	    </Router>
+		<HashRouter>
+			<Switch>
+				<Route path='/login' component={Login} />
+				{isLogin ? (
+					<Route path='/' component={Root}>
+					<Root>
+						<Switch>
+							<Route exact path="/home" component={Home} />
+							<Route exact path="/birth" component={Birth} />
+							<Route exact path="/quill" component={Quill} />
+							<Route exact path="/mkdown" component={MKDown} />
+						</Switch>
+					</Root>
+				</Route>
+				) : (
+					<Redirect from="/" to="/login" />
+				)}
+			</Switch>
+		</HashRouter>
 	);
 }
 

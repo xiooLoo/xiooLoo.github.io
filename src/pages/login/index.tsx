@@ -29,7 +29,7 @@ class LoginForm extends React.Component<ILoginFormProps, ILoginParam> {
         this.props.form.validateFields(async (err, values) => {
             if (!err) {
                 try {
-                    this.props.history.push('/home');
+                    this.props.history.push('/');
                 } catch (error) {
                     message.error(JSON.stringify(error));
                 }
