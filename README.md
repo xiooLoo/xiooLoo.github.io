@@ -104,3 +104,15 @@ XIOOLOO.GITHUB.IO
 ┣━━━━README.md
 ┗━━━━tsconfig.json
 ```
+
+##  涉及到的package:
+
+- 富文本编辑器:
+
+  [braft-editor](https://braft.margox.cn/)
+
+- MarkDown编辑器:
+
+  [for-editor](https://md.kkfor.com/)
+
+  [react-markdown-editor-lite](https://github.com/HarryChen0506/react-markdown-editor-lite)

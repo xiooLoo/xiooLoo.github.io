@@ -22,15 +22,15 @@ const RouterConfig = () => {
 				<Route path='/login' component={Login} />
 				{isLogin ? (
 					<Route path='/' component={Root}>
-					<Root>
-						<Switch>
-							<Route exact path="/home" component={Home} />
-							<Route exact path="/birth" component={Birth} />
-							<Route exact path="/quill" component={Quill} />
-							<Route exact path="/mkdown" component={MKDown} />
-						</Switch>
-					</Root>
-				</Route>
+						<Root>
+							<Switch>
+								<Route exact path="/home" component={Home} />
+								<Route exact path="/birth" component={Birth} />
+								<Route exact path="/quill" component={Quill} />
+								<Route exact path="/mkdown" component={MKDown} />
+							</Switch>
+						</Root>
+					</Route>
 				) : (
 					<Redirect from="/" to="/login" />
 				)}
