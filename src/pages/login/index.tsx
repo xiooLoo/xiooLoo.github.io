@@ -22,6 +22,11 @@ class LoginForm extends React.Component<ILoginFormProps, ILoginParam> {
 
     constructor(props: ILoginFormProps) {
         super(props);
+        this.state = {
+            username: 'xiooLoo',
+            password: '112233',
+            remember: true
+        };
     }
 
     handleSubmit = (e: React.SyntheticEvent) => {

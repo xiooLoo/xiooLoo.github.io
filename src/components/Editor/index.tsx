@@ -50,7 +50,7 @@ export default class Editor extends React.Component {
     ]
 
     // 在此处获取服务端数据
-    const htmlContent = `<p>念佛二位念佛二五年纷纷</p><p><strong class=\"ql-size-huge\">just</strong></p><p>你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风</p>`
+    const htmlContent = `<p>念佛二位念佛二五年纷纷</p><p><strong class="ql-size-huge">just</strong></p><p>你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风你好，闻见看见你纷纷放你文风</p>`
     this.setState({
       editorState: BraftEditor.createEditorState(htmlContent),
       controls,
@@ -58,7 +58,7 @@ export default class Editor extends React.Component {
     })
   }
 
-  saveEditorContent(htmlContent: any) {
+  saveEditorContent (htmlContent: any) {
     console.log('保存HTML:', htmlContent)
   }
 
@@ -72,7 +72,7 @@ export default class Editor extends React.Component {
   }
 
   render() {
-    const {editorState} = this.state
+    const { editorState } = this.state
     return (
       <div className="my-editor">
         <BraftEditor 

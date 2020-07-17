@@ -63,7 +63,7 @@ export default class MKDown extends React.Component {
   handleImageUpload(file: any, callback: any) {
     const reader = new FileReader()
     reader.onload = () => {      
-      const convertBase64UrlToBlob = (urlData: any) => {  
+      /*const convertBase64UrlToBlob = (urlData: any) => {  
         let arr = urlData.split(','), mime = arr[0].match(/:(.*?);/)[1]
         let bstr = atob(arr[1])
         let n = bstr.length
@@ -73,7 +73,7 @@ export default class MKDown extends React.Component {
         }
         return new Blob([u8arr], {type:mime})
       }
-      const blob = convertBase64UrlToBlob(reader.result)
+      const blob = convertBase64UrlToBlob(reader.result)*/
       setTimeout(() => {
         // setTimeout 模拟异步上传图片
         // 当异步上传获取图片地址后，执行calback回调（参数为imageUrl字符串），即可将图片地址写入markdown

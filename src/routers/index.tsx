@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   HashRouter,
   Switch,
@@ -14,8 +14,10 @@ import MKDown from '../pages/mkdown';
 
 
 const RouterConfig = () => {
-	const [isLogin, setIsLogin] = useState(true)
-
+	const [isLogin, setIsLogin] = useState(false)
+	useEffect(() => {
+		setIsLogin(true)
+	}, [isLogin])
 	return (
 		<HashRouter>
 			<Switch>
