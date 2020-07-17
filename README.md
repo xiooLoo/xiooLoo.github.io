@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 build 文件： `master`分支
 
-在线访问地址：http://xiooloo.gihub.io
+在线访问地址：https://xiooloo.github.io
 
 ---
 
