@@ -3,6 +3,7 @@ import { FormComponentProps } from 'antd/lib/form';
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import './index.scss';
+import http from '../../fetch/axios'
 
 interface ILoginParam {
     username: string;
@@ -27,6 +28,24 @@ class LoginForm extends React.Component<ILoginFormProps, ILoginParam> {
             password: '112233',
             remember: true
         };
+    }
+
+    componentDidMount() {
+        this.authorizeGithub()
+    }
+
+    authorizeGithub() {
+        let params = {
+            client_id: 'Iv1.ad6d0ad9d510ecfa',
+            client_secret: '4d943b9b02e15ddd31927abdcf2c0bcf3ae81440',
+            redirect_uri: 'https://xiooloo.github.io/#/mkdown',
+            login: 'xiooLoo',
+            state: Math.floor(Math.random() * Math.floor(999999)),
+            allow_signup: true
+        }
+        http.get('/login/oauth/authorize', params).then((res) => {
+            console.log('++++++++++:', res)
+        })    
     }
 
     handleSubmit = (e: React.SyntheticEvent) => {
