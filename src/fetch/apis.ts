@@ -1,6 +1,6 @@
 import http from './axios'
 
-export function test_getList(params) {
+export function test_getList(params: any) {
   return http.get('/api/getList', { params })
 }
 

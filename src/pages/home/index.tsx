@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 interface Props {
 }
@@ -14,11 +15,11 @@ class Home extends React.Component<Props, States> {
         };
     }
 
-
     render() {
         return (
             <div className="home">
-                Home
+                <Link to="/tszero">go TypeScript</Link>
+                {/* <button onClick={() => this.goTsZero()}>go TypeScript</button> */}
             </div>
         )
     }

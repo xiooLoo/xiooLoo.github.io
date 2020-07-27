@@ -31,22 +31,22 @@ class Root extends React.Component<Props, States> {
     render() {
         return (
             <>
-            <Header className="App-header" name="零壹"/>
-            <div className="root">
-                <div className="root-nav">
-                    {leftMenus.map(item => {    
-                        return (
-                            <span className={item.clazzName} key={item.clazzName}></span>        
-                        );
-                    })}
+                <Header className="app-header" name="零壹"/>
+                <div className="root">
+                    <div className="root-nav">
+                        {leftMenus.map(item => {    
+                            return (
+                                <span className={item.clazzName} key={item.clazzName}></span>        
+                            );
+                        })}
+                    </div>
+                    <div className="root-content">
+                        {this.props.children}
+                    </div>
+                    <div className="root-calendar">
+                        <Calendar fullscreen={false} onPanelChange={this.onPanelChange} />
+                    </div>
                 </div>
-                <div className="root-content">
-                    {this.props.children}
-                </div>
-                <div className="root-calendar">
-                    <Calendar fullscreen={false} onPanelChange={this.onPanelChange} />
-                </div>
-            </div>
             </>
         )
     }
