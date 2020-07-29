@@ -26,6 +26,17 @@ class TSZero extends React.Component<Person> {
     };
   }
 
+  createSquare(config: SquareConfig): {color: string, area: number} {
+    let newSquare = {color: 'white', area: 100}
+    if (config.color) {
+      newSquare.color = config.color
+    }
+    if (config.width) {
+      newSquare.area = config.width * config.width
+    }
+    return newSquare
+  }
+
   keepWholeObject(wholeObject: { a: string, b?: number }) {
     let { a, b = 200 } = wholeObject
     return a + '=' + b
@@ -51,6 +62,7 @@ class TSZero extends React.Component<Person> {
           <span>{this.greeter(this.initStudent())}</span>
           <Hello compiler="TypeScript" framework="语法框架" />
           <Hello compiler={this.keepWholeObject({ a: '结构a' })} framework="结构aa" />
+          <p>{JSON.stringify(this.createSquare({color: '#efefef'}))}</p>
         </div>
       </div>
     )
