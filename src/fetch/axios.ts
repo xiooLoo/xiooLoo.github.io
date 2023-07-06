@@ -3,7 +3,7 @@ import axios from 'axios';
 // const CancelToken = axios.CancelToken;
 
 let instance = axios.create({
-  baseURL: 'https://github.com',
+  baseURL: '/api',
   timeout: 10000,
   withCredentials: true,
   headers: {
